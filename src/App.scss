@@ -1,0 +1,8 @@
+$red:red;
+@function fontSize2Rem($fontSize){
+  @return calc($fontSize / 100) * 1rem
+}
+div{
+  margin: 0;
+  padding: 0;
+}

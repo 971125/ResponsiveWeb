@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React + TS</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script type="text/javascript">
+      window.onload=function(){
+        console.log(window.innerWidth)
+        console.log(document.documentElement)
+        if(window.innerWidth < 789){
+          document.documentElement.style.fontSize = (window.innerWidth /440) * 100 + 'px'
+        }else{
+          document.documentElement.style.fontSize = (window.innerWidth / 1920) * 100 + 'px'
+        }
+      }
+    </script>
+  </body>
+</html>
