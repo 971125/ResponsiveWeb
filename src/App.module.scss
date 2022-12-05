@@ -1,11 +1,297 @@
 
 .App{
   .coutent1{
-    width: fontSize2Rem(2272);
-    height: fontSize2Rem(1276);
+    width: fontSize2Rem(1920);
+    height: fontSize2Rem(1080);
     background-image: url('./assets/lda-kv-1.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    // background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    .nav_title{
+      width: fontSize2Rem(1920);
+      height: fontSize2Rem(195);
+      background: linear-gradient(180deg, rgba(0,0,0,0.60) 0%, rgba(0,0,0,0.24) 74%, rgba(0,0,0,0.00) 100%);
+      display: flex;
+      padding: 0px fontSize2Rem(100);
+      .nav_title_content{
+        font-size: fontSize2Rem(18);
+        width: 100%;
+        height: fontSize2Rem(100);
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #FFFFFF;
+        .nav_title_content_logo{
+          height: 100%;
+          display: flex;
+          align-items: center         
+        }
+        .nav_title_content_logo1{
+          @include image_public(fontSize2Rem(128),fontSize2Rem(40),'./assets/Lexus_2D_Tag_White_LR_RGB.png');
+        }
+        .nav_title_line{
+            width: 1px;
+            height: 24px;
+            background-color: #D8D8D8;
+            margin-left: fontSize2Rem(8);
+            margin-right: fontSize2Rem(13)
+        }
+        .nav_title_content_logo2{
+          @include image_public(fontSize2Rem(133),fontSize2Rem(26),'./assets/logo.png');
+        }
+        .nav_tab{
+          display: flex;
+          align-items: center;
+          ul{
+            display: flex;
+            width: fontSize2Rem(542);
+            align-items: center;
+            justify-content: space-between;
+            color: #FFFFFF;
+            font-family: LEXUS-HeiS-Bold-U;
+            font-size: fontSize2Rem(18);
+            li{
+              list-style-type: none;
+            }
+          }
+          .more_logo{
+            @include image_public(fontSize2Rem(22),fontSize2Rem(22),'./assets/more.png');
+            margin-left: fontSize2Rem(207);
+          }
+        }
+      }
+    }
+    .content_body{
+      padding: 0px fontSize2Rem(100);
+      flex:1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .content_body_title{
+        .content_body_title1{
+          font-size: fontSize2Rem(56);
+          height: fontSize2Rem(64);
+          color: $stepdesc;
+        }
+        .content_body_title2{
+          font-size: fontSize2Rem(26);
+          color: $coursedesc;
+        }
+      }
+      .content_body_desc{
+        font-size: fontSize2Rem(36);
+        margin-bottom: 0px;
+        
+        p{
+          text-align: right;
+          color: $stepdesc;
+          margin-bottom: fontSize2Rem(16);
+        }
+      }
+    }
+  }
+  .content2{
+    margin-top: fontSize2Rem(209);
+    margin-left: fontSize2Rem(140);
+    margin-right: fontSize2Rem(140);
+    display: flex;
+    justify-content: space-between;
+    .content2_logodesc{
+      display: flex;
+      flex: 1;
+      justify-content: space-between;
+      margin-right:fontSize2Rem(35); 
+    }
+    .content2_logo{
+      @include image_public(fontSize2Rem(179),fontSize2Rem(195),'./assets/lda-biglogo.png');
+    }
+    .content2_desc{
+      flex: 1;
+      margin-left: fontSize2Rem(35);
+      font-size: fontSize2Rem(16);
+      color: $coursedesc;
+    }
+    .content2_main_logo{
+      @include image_public(fontSize2Rem(1022),fontSize2Rem(524),'./assets/image.png');
+    }
+  }
+  .content3_desc{
+    font-size: fontSize2Rem(16);
+    margin-top: fontSize2Rem(238);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .content3_desc_detail{
+      width: fontSize2Rem(1147);
+      text-align: center;
+      color: $coursedesc;
+    }
+  }
+  .content_course{
+    margin-top: fontSize2Rem(101);
+    .content_course_title{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-right: fontSize2Rem(140);
+      margin-left: fontSize2Rem(140);
+      .content_course_title1{
+        font-size: fontSize2Rem(36);
+        color: $stepdesc;
+      }
+      .content_course_titledesc{
+        font-size: fontSize2Rem(16);
+        margin-top: fontSize2Rem(33);
+        color: $coursedesc;
+      }
+    }
+    .content_timeline{
+      margin-top: fontSize2Rem(98);
+      position: relative;
+      .content_timeline_lineLogo{
+        display: flex;
+        justify-content: space-around;
+        font-size: fontSize2Rem(16);
+        .content_timeline_logo_content, .content_timeline_logo_content1{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding-top: fontSize2Rem(87);
+          color: $stepdesc;
+          .content_time_content1{
+            margin-top: fontSize2Rem(87);
+          }
+          .content_time_content2{
+            margin-top: fontSize2Rem(14)
+          }
+        }
+        .content_timeline_logo_content1{
+          padding: 0;
+        }
+        &::before{
+          content: "";
+          height: fontSize2Rem(4);
+          width: 100%;
+          background-color: #666666;
+          position: absolute;
+          top: fontSize2Rem(100);
+        }
+        p{
+          text-align: center;
+        }
+        .content_timeline_circle{
+          width: fontSize2Rem(29);
+          height: fontSize2Rem(29);
+          border-radius: 50%;
+          background-color: #666666;
+        }
+        .content_timeline_circle_content{
+          width: fontSize2Rem(204);
+          height: fontSize2Rem(204);
+          background-color:rgba(102, 102, 102, 0.4);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .content_timeline_circle_innercontent{
+            width: fontSize2Rem(150);
+            height: fontSize2Rem(150);
+            background-color:#666666;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 99;
+            color: #ffffff;
+            font-size: fontSize2Rem(18);
+          }
+        }
+      }
+    }
+  }
+  .content4{
+    display: flex;
+    margin-left: fontSize2Rem(140);
+    margin-right: fontSize2Rem(140);
+    margin-top: fontSize2Rem(153);
+    .content4_desc{
+      width: fontSize2Rem(478);
+      margin-right: fontSize2Rem(49);
+      margin-top: fontSize2Rem(121);
+      .content4_main{
+        font-size: fontSize2Rem(36);
+      }
+      .content4_main_desc{
+        margin-top: fontSize2Rem(17);
+        line-height: fontSize2Rem(36);
+        font-size: fontSize2Rem(16);
+        color: $desccolor;
+      }
+    }
+    .content4_logo{
+      @include image_public(fontSize2Rem(1118),fontSize2Rem(682),'./assets/g-book-8-2880x1480-220803.png');
+    }
+  }
+  .content5{
+    display: flex;
+    margin-top: fontSize2Rem(148);
+    margin-right: fontSize2Rem(140);
+    margin-left: fontSize2Rem(140);
+    .contents_logodesc{
+      .contents_logo{
+        @include image_public(fontSize2Rem(1118),fontSize2Rem(682),'./assets/g-book-9-2880x1480-220803.png');
+        background-size: auto 100%;
+        background-position-x: right
+      }
+      .contents_desc{
+        font-size: fontSize2Rem(16);
+        margin-top: fontSize2Rem(14);
+        color: $article;
+      }
+    }
+    .contents_maindesc{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: fontSize2Rem(49);
+      .contents_maindesc_title{
+        font-size: fontSize2Rem(36);
+      }
+      .contents_maindesc_detail{
+        margin-top: fontSize2Rem(29);
+        font-size: fontSize2Rem(16);
+        color: $desccolor;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:990px){
+  .App{
+    .content2{
+      align-items: center;
+      flex-direction: column-reverse;
+      .content2_logodesc{
+        align-items: center;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:880px) {
+  .App{
+    .coutent1{
+      .nav_title{
+        .nav_title_content{
+          .nav_tab{
+            ul{
+              display: none;
+            }
+          }
+        }
+      }
+    }
   }
 }

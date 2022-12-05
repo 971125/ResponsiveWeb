@@ -10,11 +10,17 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
     <script type="text/javascript">
-      window.onload=function(){
-        console.log(window.innerWidth)
-        console.log(document.documentElement)
-        if(window.innerWidth < 789){
+      function rootSize (){
+        if(window.innerWidth < 880){
           document.documentElement.style.fontSize = (window.innerWidth /440) * 100 + 'px'
+        }else{
+          document.documentElement.style.fontSize = (window.innerWidth / 1920) * 100 + 'px'
+        }
+      }
+      window.onload=rootSize()
+      window.onresize = function(){
+        if(window.innerWidth < 550){
+          document.documentElement.style.fontSize = (window.innerWidth /414) * 100 + 'px'
         }else{
           document.documentElement.style.fontSize = (window.innerWidth / 1920) * 100 + 'px'
         }
